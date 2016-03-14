@@ -35,4 +35,12 @@ public class MiHashSet
         }
         return estaEnLista;
     }
+    
+    /**
+     * Vacía el conjunto.
+     */
+    public void clear()
+    {
+        lista.clear();
+    }
 }
