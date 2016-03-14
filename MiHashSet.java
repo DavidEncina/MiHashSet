@@ -73,4 +73,12 @@ public class MiHashSet
         }
         return existe;
     }
+    
+    /**
+     * Devuelve el número de elementos del conjunto.
+     */
+    public int size()
+    {
+        return lista.size();
+    }   
 }
