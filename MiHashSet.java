@@ -94,10 +94,29 @@ public class MiHashSet
                listado =  "[" + lista.get(i) + "]";
             }
             else {
-                
+                listado = "[" + lista.get(i) + "]";
             }
-            texto = "[" + lista.get(i) + "]";
+            
         }
         return listado;
+    }
+    
+    /**
+     * Devuelve verdadero si el parámetro es igual al conjunto sobre el que se invoca y falso en otro caso.
+     */
+    public boolean equals(MiHashSet otroConjunto)
+    {
+        boolean igual = false;
+        if(otroConjunto.size() == lista.size()) {
+            int i = 0;
+            while (i < lista.size()) {
+                if((otroConjunto.contains(lista.get(i))))
+                {
+                    igual = true;
+                }
+                i++;
+            }
+        }
+        return igual;
     }
 }
