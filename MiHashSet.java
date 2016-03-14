@@ -80,5 +80,24 @@ public class MiHashSet
     public int size()
     {
         return lista.size();
-    }   
+    }
+    
+    /**
+     * Devuelve una cadena conteniendo todos los elementos del conjunto separados por comas y entre corchetes.
+     */
+    public String toString()
+    {
+        String texto = null;
+        String listado = null;
+        for( int i = 0; i < lista.size(); i++) {
+            if (i == 0) {
+               listado =  "[" + lista.get(i) + "]";
+            }
+            else {
+                
+            }
+            texto = "[" + lista.get(i) + "]";
+        }
+        return listado;
+    }
 }

@@ -96,7 +96,9 @@ public class TestMiHashSet
         otroHashSet.add(9);
         MiHashSet hashSetVacio = new MiHashSet();
         numeroTestsFallados += testea(true, hashset.equals(otroHashSet), "equals(otroHashSet)");     
-        numeroTestsFallados += testea(false, hashset.equals(otroHashSet), "equals(hashSetVacio)");          
+        numeroTestsFallados += testea(false, hashset.equals(hashSetVacio), "equals(hashSetVacio)");  
+        otroHashSet.add(12);
+        numeroTestsFallados += testea(false, hashset.equals(otroHashSet), "equals(otroHashSet)");    
 
         //remove
         System.out.println();
@@ -134,7 +136,7 @@ public class TestMiHashSet
         otroHashSet.add(9);
         hashSetVacio = new MiHashSet();
         numeroTestsFallados += testea(false, hashset.equals(otroHashSet), "equals(otroHashSet)");     
-        numeroTestsFallados += testea(true, hashset.equals(otroHashSet), "equals(hashSetVacio)");         
+        numeroTestsFallados += testea(true, hashset.equals(hashSetVacio), "equals(hashSetVacio)");         
         
         System.out.println();
         if (numeroTestsFallados == 0) {
@@ -156,7 +158,7 @@ public class TestMiHashSet
                           String nombreFuncion)
     {
         int valorDevuelto = 0;
-        if (valorEsperado == valorObtenido) {
+        if (valorEsperado.equals(valorObtenido)) {
             System.out.println("OK: " + nombreFuncion);
         }
         else {
