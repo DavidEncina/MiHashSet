@@ -43,4 +43,12 @@ public class MiHashSet
     {
         lista.clear();
     }
+    
+    /**
+     * Devuelve verdadero si el conjunto contiene el elemento, falso en caso contrario.
+     */
+    public boolean contains(int elemento)
+    {
+        return lista.contains(elemento);        
+    }
 }
