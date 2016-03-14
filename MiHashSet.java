@@ -59,4 +59,18 @@ public class MiHashSet
     {
         return lista.isEmpty();
     }
+    
+    /**
+     * Elimina del conjunto el elemento dado. 
+     * Si no existiera devuelve falso; si existía en el conjunto devuelve verdadero.
+     */
+    public boolean remove(int elemento)
+    {
+        boolean existe = false;        
+        if (contains(elemento) == true) {
+            lista.remove(lista.indexOf(elemento));
+            existe = true;
+        }
+        return existe;
+    }
 }
