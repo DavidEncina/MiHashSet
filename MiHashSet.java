@@ -51,4 +51,12 @@ public class MiHashSet
     {
         return lista.contains(elemento);        
     }
+    
+    /**
+     * Devuelve verdadero si el conjunto no contiene elementos.
+     */
+    public boolean isEmpty()
+    {
+        return lista.isEmpty();
+    }
 }
